@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <%= render @restaurant %>
+  <div class="mt-4">
+    <p><strong>Reviews</strong></p>
+    <ul class="list-group">
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item"><%= review.content %> - <%= review.rating %></li>
+      <% end %>
+    </ul>
+    <br>
+    <%= link_to "Back to list", restaurants_path %>
+  </div>
+</div>
